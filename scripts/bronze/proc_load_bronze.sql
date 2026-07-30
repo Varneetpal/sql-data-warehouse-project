@@ -46,10 +46,10 @@ BEGIN TRY
 
 
 		SET @start_time = GETDATE();
-		PRINT '>> Truncating Table: bronze.crm_cust_info'
-		TRUNCATE TABLE bronze.crm_cust_info;
+		PRINT '>> Truncating Table: bronze.crm_prd_info'
+		TRUNCATE TABLE bronze.crm_prd_info;
 
-		PRINT '>> Inserint Data Inro: bronze.crm_cust_info'
+		PRINT '>> Inserint Data Inro: bronze.crm_prd_info'
 		BULK INSERT bronze.crm_prd_info
 		FROM 'C:\Data Warehousing Project\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_crm\prd_info.csv'
 		WITH (
